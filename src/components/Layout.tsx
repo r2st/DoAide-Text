@@ -5,15 +5,15 @@ import { useState } from 'react';
 export default function Layout() {
   const location = useLocation();
   const [menuOpen, setMenuOpen] = useState(false);
-  const isHome = location.pathname === '/';
 
   return (
     <div className="min-h-screen flex flex-col">
       <header className="bg-bg-secondary border-b border-border sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 no-underline">
-            <span className="text-xl font-bold text-text-primary">DoAide</span>
-            <span className="text-xl font-bold italic text-gold">Text</span>
+            <span className="text-xl font-bold text-accent">DoAide</span>
+            <span className="text-xl text-text-muted font-light">|</span>
+            <span className="text-xl font-bold text-text-primary">Text</span>
           </Link>
 
           <button
@@ -37,7 +37,7 @@ export default function Layout() {
                 to={tool.path}
                 className={`px-3 py-1.5 rounded-md text-sm no-underline transition-colors ${
                   location.pathname === tool.path
-                    ? 'bg-accent/20 text-accent-hover'
+                    ? 'bg-accent/15 text-accent-hover'
                     : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                 }`}
               >
@@ -55,7 +55,7 @@ export default function Layout() {
                     to={tool.path}
                     className={`block px-4 py-2 text-sm no-underline ${
                       location.pathname === tool.path
-                        ? 'bg-accent/20 text-accent-hover'
+                        ? 'bg-accent/15 text-accent-hover'
                         : 'text-text-secondary hover:text-text-primary hover:bg-bg-tertiary'
                     }`}
                   >
@@ -77,7 +77,7 @@ export default function Layout() {
                 onClick={() => setMenuOpen(false)}
                 className={`block px-3 py-2 rounded-md text-sm no-underline ${
                   location.pathname === tool.path
-                    ? 'bg-accent/20 text-accent-hover'
+                    ? 'bg-accent/15 text-accent-hover'
                     : 'text-text-secondary hover:text-text-primary'
                 }`}
               >
@@ -93,19 +93,32 @@ export default function Layout() {
         <Outlet />
       </main>
 
-      {!isHome && (
-        <footer className="bg-bg-secondary border-t border-border py-6 px-4">
-          <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-            <Link to="/" className="flex items-center gap-2 no-underline">
-              <span className="text-sm font-bold text-text-primary">DoAide</span>
-              <span className="text-sm font-bold italic text-gold">Text</span>
-            </Link>
-            <p className="text-text-muted text-sm">
-              Free text tools. No login. No tracking. All processing happens in your browser.
-            </p>
+      <footer className="bg-bg-secondary border-t border-border py-8 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
+            <div className="flex flex-col items-center sm:items-start gap-2">
+              <Link to="/" className="flex items-center gap-2 no-underline">
+                <span className="text-sm font-bold text-accent">DoAide</span>
+                <span className="text-sm text-text-muted font-light">|</span>
+                <span className="text-sm font-bold text-text-primary">Text</span>
+              </Link>
+              <p className="text-text-muted text-xs">
+                Free text tools. No login. All processing in your browser.
+              </p>
+            </div>
+            <div className="flex flex-col items-center sm:items-end gap-3">
+              <div className="flex flex-wrap justify-center gap-4 text-xs text-text-secondary">
+                <a href="https://doaide.com" className="hover:text-accent no-underline transition-colors">DoAide Home</a>
+                <a href="https://json.doaide.com" className="hover:text-accent no-underline transition-colors">JSON Tools</a>
+                <a href="https://image.doaide.com" className="hover:text-accent no-underline transition-colors">Image Tools</a>
+              </div>
+              <span className="inline-flex items-center gap-1.5 text-xs text-text-muted bg-bg-tertiary px-3 py-1 rounded-full">
+                A <a href="https://doaide.com" className="text-accent font-semibold no-underline hover:text-accent-hover transition-colors">DoAide</a> Product
+              </span>
+            </div>
           </div>
-        </footer>
-      )}
+        </div>
+      </footer>
     </div>
   );
 }

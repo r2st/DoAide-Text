@@ -86,7 +86,7 @@ export default function StringEscape() {
             key={m}
             onClick={() => setMode(m)}
             className={`px-3 py-1.5 rounded-md text-sm cursor-pointer transition-colors ${
-              mode === m ? 'bg-gold/20 text-gold' : 'bg-bg-secondary border border-border text-text-secondary hover:text-text-primary'
+              mode === m ? 'bg-accent/15 text-accent' : 'bg-bg-secondary border border-border text-text-secondary hover:text-text-primary'
             }`}
           >
             {modeLabels[m]}

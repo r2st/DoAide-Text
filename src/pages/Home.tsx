@@ -16,8 +16,9 @@ export default function Home() {
       <section className="py-16 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            <span className="text-text-primary">DoAide</span>{' '}
-            <span className="italic text-gold">Text</span>
+            <span className="text-accent">DoAide</span>
+            <span className="text-text-muted font-light mx-3">|</span>
+            <span className="text-text-primary">Text</span>
           </h1>
           <p className="text-lg md:text-xl text-text-secondary mb-2">
             Free Text Tools — No Login Required
@@ -65,7 +66,7 @@ export default function Home() {
                     className="group p-5 bg-bg-secondary border border-border rounded-xl no-underline hover:border-accent/50 hover:bg-bg-tertiary/50 transition-all"
                   >
                     <div className="flex items-start gap-3">
-                      <span className="text-2xl w-10 h-10 flex items-center justify-center bg-bg-tertiary rounded-lg text-gold shrink-0 font-mono">
+                      <span className="text-2xl w-10 h-10 flex items-center justify-center bg-bg-tertiary rounded-lg text-accent shrink-0 font-mono">
                         {tool.icon}
                       </span>
                       <div>
@@ -84,21 +85,6 @@ export default function Home() {
           </section>
         );
       })}
-
-      <footer className="bg-bg-secondary border-t border-border py-8 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="text-lg font-bold text-text-primary">DoAide</span>
-            <span className="text-lg font-bold italic text-gold">Text</span>
-          </div>
-          <p className="text-text-muted text-sm mb-4">
-            Free text tools. No login. No tracking.
-          </p>
-          <p className="text-text-muted text-xs">
-            All processing happens client-side in your browser.
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

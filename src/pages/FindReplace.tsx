@@ -81,7 +81,7 @@ export default function FindReplace() {
             <input type="checkbox" checked={globalMatch} onChange={(e) => setGlobalMatch(e.target.checked)} className="accent-accent" />
             Replace all
           </label>
-          {matchCount > 0 && <span className="text-sm text-gold">{matchCount} match{matchCount !== 1 ? 'es' : ''}</span>}
+          {matchCount > 0 && <span className="text-sm text-accent">{matchCount} match{matchCount !== 1 ? 'es' : ''}</span>}
           {error && <span className="text-sm text-error">{error}</span>}
         </div>
       </div>

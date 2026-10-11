@@ -1,17 +1,21 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg-primary: #0f0f1a;
-  --color-bg-secondary: #1a1a2e;
-  --color-bg-tertiary: #252540;
-  --color-border: #2a2a4a;
-  --color-text-primary: #e8e8f0;
-  --color-text-secondary: #a0a0b8;
-  --color-text-muted: #6a6a88;
-  --color-gold: #F0B429;
-  --color-gold-dim: #c49322;
-  --color-accent: #6366f1;
-  --color-accent-hover: #818cf8;
+  --color-da-primary: #0D9488;
+  --color-da-primary-hover: #0F766E;
+  --color-da-bg: #FFFFFF;
+  --color-da-surface: #F8FFFE;
+  --color-da-text: #1E293B;
+
+  --color-bg-primary: #FFFFFF;
+  --color-bg-secondary: #F8FFFE;
+  --color-bg-tertiary: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-text-primary: #1E293B;
+  --color-text-secondary: #64748B;
+  --color-text-muted: #94A3B8;
+  --color-accent: #0D9488;
+  --color-accent-hover: #0F766E;
   --color-success: #22c55e;
   --color-error: #ef4444;
   --color-warning: #f59e0b;
@@ -22,6 +26,23 @@ body {
   color: var(--color-text-primary);
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-bg-primary: #0F172A;
+    --color-bg-secondary: #1E293B;
+    --color-bg-tertiary: #334155;
+    --color-border: #475569;
+    --color-text-primary: #F1F5F9;
+    --color-text-secondary: #94A3B8;
+    --color-text-muted: #64748B;
+    --color-accent: #2DD4BF;
+    --color-accent-hover: #14B8A6;
+    --color-da-bg: #0F172A;
+    --color-da-surface: #1E293B;
+    --color-da-text: #F1F5F9;
+  }
 }
 
 ::-webkit-scrollbar {

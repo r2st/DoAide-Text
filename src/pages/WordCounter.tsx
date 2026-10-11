@@ -64,7 +64,7 @@ export default function WordCounter() {
       <div className="grid grid-cols-3 sm:grid-cols-6 gap-3 mb-6">
         {statCards.map((s) => (
           <div key={s.label} className="bg-bg-secondary border border-border rounded-xl p-3 text-center">
-            <div className="text-2xl font-bold text-gold">{s.value.toLocaleString()}</div>
+            <div className="text-2xl font-bold text-accent">{s.value.toLocaleString()}</div>
             <div className="text-xs text-text-muted mt-1">{s.label}</div>
           </div>
         ))}

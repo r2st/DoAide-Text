@@ -80,7 +80,7 @@ export default function TextToSlug() {
             <span className="text-sm text-text-secondary">Slugs</span>
             <CopyButton text={output} />
           </div>
-          <div className="w-full h-56 bg-bg-tertiary border border-border rounded-lg p-4 text-text-primary text-sm overflow-auto whitespace-pre-wrap font-mono text-gold">
+          <div className="w-full h-56 bg-bg-tertiary border border-border rounded-lg p-4 text-text-primary text-sm overflow-auto whitespace-pre-wrap font-mono text-accent">
             {output || <span className="text-text-muted">Slugs will appear here...</span>}
           </div>
         </div>
