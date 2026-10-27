@@ -1,9 +1,11 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { tools } from '../utils/tools';
 import { useState } from 'react';
+import useSEO from '../hooks/useSEO';
 
 export default function Layout() {
   const location = useLocation();
+  useSEO(location.pathname.replace(/\/+$/, '') || '/');
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
